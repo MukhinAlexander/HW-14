@@ -2,11 +2,13 @@ package org.skypro.skyshop.basket;
 
 import org.skypro.skyshop.product.Product;
 
+import java.util.SortedMap;
+
 public class ProductBasket {
 
     private final Product[] basket;
     public ProductBasket(){
-        this.basket = new Product[5];
+        this.basket = new Product[6];
     }
     public boolean addProduct(Product product) {
 
@@ -25,7 +27,7 @@ public class ProductBasket {
             if (basket[i] == null) continue;
             fullCost = fullCost + basket[i].getCost();
         }
-        System.out.println(fullCost);
+        System.out.println("Итого: " + fullCost);
     }
 
     public void printBasket(){
@@ -35,8 +37,20 @@ public class ProductBasket {
             }
             if (e == null) {System.out.println("null");}
             else {
-            System.out.println(e.getName()+ ": " + e.getCost());}
+            e.toString();}
         }
+    }
+
+    public void countSpecialProducts(){
+        boolean empty = true;
+        int count = 0;
+        for (Product e : basket){
+            if (e != null && e.isSpecial()){
+                count++;
+            }
+            empty = false;
+        }
+        System.out.println("Специальных товаров: " + count);
     }
 
     public boolean checkProduct(String name){
