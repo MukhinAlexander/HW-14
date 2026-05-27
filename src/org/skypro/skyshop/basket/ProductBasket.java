@@ -2,8 +2,6 @@ package org.skypro.skyshop.basket;
 
 import org.skypro.skyshop.product.Product;
 
-import java.util.SortedMap;
-
 public class ProductBasket {
 
     private final Product[] basket;
@@ -37,7 +35,8 @@ public class ProductBasket {
             }
             if (e == null) {System.out.println("null");}
             else {
-            e.toString();}
+                System.out.println(e);
+            }
         }
     }
 

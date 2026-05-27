@@ -23,7 +23,6 @@ public class DiscountedProduct extends Product{
 
     @Override
     public String toString(){
-        System.out.println(getName() + " со скидкой:" + getCost() + "(" + discount + "%)");
         return getName() + " со скидкой:" + getCost() + "(" + discount + "%)";
     }
 

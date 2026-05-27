@@ -21,7 +21,6 @@ public class FixPriceProduct extends Product {
 
     @Override
     public String toString(){
-        System.out.println(getName() + " c фиксированной ценой: " + "Фиксированная цена " + FIX_PRICE);
         return getName() + " c фиксированной ценой: " + "Фиксированная цена " + FIX_PRICE;
     }
 

@@ -21,7 +21,6 @@ public class SimpleProduct extends Product{
 
     @Override
     public String toString(){
-        System.out.println(getName() + ": " + getCost());
         return getName() + ": " + getCost();
     }
 
