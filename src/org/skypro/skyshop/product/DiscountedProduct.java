@@ -1,5 +1,7 @@
 package org.skypro.skyshop.product;
 
+    /** Объявляем реализаццию класса DiscountedProduct */
+
 public class DiscountedProduct extends Product{
 
     private int cost;
@@ -26,5 +28,16 @@ public class DiscountedProduct extends Product{
         return getName() + " со скидкой:" + getCost() + "(" + discount + "%)";
     }
 
+    /** Оверрайдим методы интерфейса Searchable */
+
+    @Override
+    public String searchTerm(){
+        return getName() + "\n" + getTypeContent();
+    }
+
+    @Override
+    public String getTypeContent(){
+        return "PRODUCT";
+    }
 
 }
