@@ -24,7 +24,7 @@ public class Article implements Searchable {
     }
 
     @Override
-    public String toString(){
+    public String getStringRepresentation(){
         return getNameArticle() + " статьи" + "\n" + getTextArcticle() + " статьи";
     }
 

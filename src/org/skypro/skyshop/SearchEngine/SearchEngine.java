@@ -28,7 +28,7 @@ public class SearchEngine {
     }
 
     public boolean addSearchable(Searchable newSearchable){
-        if (newSearchable == null) return false;
+        if (newSearchable == null) System.out.println("null");;
         for (int i = 0; i < searchArray.length; ++i){
             if (searchArray[i] == null){
                 searchArray[i] = newSearchable;
@@ -36,6 +36,5 @@ public class SearchEngine {
             }
         }
         return false;
-
     }
 }

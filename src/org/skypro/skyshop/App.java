@@ -1,5 +1,7 @@
 package org.skypro.skyshop;
 
+import org.skypro.skyshop.Interface.Searchable;
+import org.skypro.skyshop.SearchEngine.SearchEngine;
 import org.skypro.skyshop.basket.ProductBasket;
 import org.skypro.skyshop.product.DiscountedProduct;
 import org.skypro.skyshop.product.FixPriceProduct;
@@ -71,6 +73,18 @@ public class App {
         /** Поиск товара по имени в пустой корзине. */
 
         basket.checkProduct("Огурец");
+
+
+        /** Проверка работы интерфейса Searchable*/
+
+
+        SearchEngine newSearch = new SearchEngine();
+        newSearch.addSearchable(product0);
+        newSearch.addSearchable(product2);
+        newSearch.addSearchable(product3);
+        newSearch.addSearchable(product4);
+
+        newSearch.search("PRODUCT");
     }
 }
 

@@ -6,7 +6,7 @@ public interface Searchable {
 
     public String getTypeContent();
 
-    default void getStringRepresentation() {
-        return;
+    default String getStringRepresentation() {
+        return null;
     }
 }

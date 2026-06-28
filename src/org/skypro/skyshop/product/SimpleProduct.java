@@ -38,4 +38,9 @@ public class SimpleProduct extends Product{
         return "PRODUCT";
     }
 
+    public String getStringRepresentation(){
+
+        return null;
+    }
+
 }
