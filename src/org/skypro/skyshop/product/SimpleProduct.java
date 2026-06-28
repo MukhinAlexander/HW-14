@@ -1,5 +1,7 @@
 package org.skypro.skyshop.product;
 
+    /** Объявляем реализаццию класса SimpleProduct */
+
 public class SimpleProduct extends Product{
 
     private int cost;
@@ -24,6 +26,16 @@ public class SimpleProduct extends Product{
         return getName() + ": " + getCost();
     }
 
+    /** Оверрайдим методы интерфейса Searchable */
 
+    @Override
+    public String searchTerm(){
+        return getName() + "\n" + getTypeContent();
+    }
+
+    @Override
+    public String getTypeContent(){
+        return "PRODUCT";
+    }
 
 }
